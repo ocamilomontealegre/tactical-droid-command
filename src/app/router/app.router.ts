@@ -13,7 +13,7 @@ export class AppRouter {
 
   private _setupRouter(): void {
     this._router.get("/", (req: Request, res: Response) =>
-      res.status(200).json({ message: "Hello World" }),
+      res.status(200).json({ message: "May the FORCE be with you" }),
     );
     this._router.use((req: Request, res: Response, next: NextFunction) =>
       next(new NotFoundException("Endpoint Not Found!")),

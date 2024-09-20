@@ -6,11 +6,11 @@ import { Logger } from "common/logger/logger.config";
 import { appConfig } from "common/env";
 import type { Application } from "express";
 
-/* eslint-disable */
+/* eslint-disable @typescript-eslint/naming-convention */
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
-/* eslint-disable*/
 
+/* eslint-enable */
 export const configureOpenAPI = (app: Application, port: number): void => {
   const logger = new Logger("OpenAPI Docs");
 
@@ -23,7 +23,11 @@ export const configureOpenAPI = (app: Application, port: number): void => {
         description: "API documentation using OpenAPI 3.0.1",
       },
     },
-    apis: [join(__dirname, "../../health/controllers/health.controller.ts")],
+    apis: [
+      join(__dirname, "../../health/controllers/health.controller.ts"),
+      join(__dirname, "../../modules/audit/controllers/audit.controller.ts"),
+      join(__dirname, "../../modules/radar/controllers/radar.controller.ts"),
+    ],
   };
 
   const openAPIDocs = swaggerJSDoc(openAPIOptions);

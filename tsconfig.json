@@ -13,7 +13,7 @@
       "@app/*": ["src/app/*"],
       "@common/*": ["src/common/*"],
       "@health/*": ["src/health/*"],
-      "@router/*": ["src/router/*"],
+      "@modules/*": ["src/modules/*"],
     },
     "resolveJsonModule": true,
     "forceConsistentCasingInFileNames": true,

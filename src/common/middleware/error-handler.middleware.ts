@@ -1,7 +1,9 @@
 import { Logger } from "common/logger/logger.config";
 import type { NextFunction, Request, Response } from "express";
 
+/* eslint-disable */
 export const errorHandler = (err: Error, req: Request, res: Response, next: NextFunction): void => {
+  /* eslint-enable */
   const logger = new Logger("Error Handler Middleware");
 
   const statusCode = 500;

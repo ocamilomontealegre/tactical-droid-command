@@ -1,5 +1,5 @@
 {
-  "name": "node_project_template",
+  "name": "tactical-droid-command",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -41,7 +41,9 @@
     "express": "^4.21.0",
     "inversify": "^6.0.2",
     "inversify-express-utils": "^6.4.6",
+    "mongodb": "^6.9.0",
     "reflect-metadata": "^0.2.2",
+    "typeorm": "^0.3.20",
     "winston": "^3.14.2",
     "zod": "^3.23.8"
   }

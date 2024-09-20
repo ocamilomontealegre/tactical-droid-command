@@ -2,7 +2,7 @@ import { Logger } from "common/logger/logger.config";
 import type { Server } from "http";
 
 export const initializeErrorHandling = (httpServer: Server): void => {
-  const logger = new Logger();
+  const logger = new Logger("Uncaught Exceptions Handler");
 
   process.on("uncaughtException", (err: Error) => {
     logger.error(`Uncaught Exception: ${err.message}`);

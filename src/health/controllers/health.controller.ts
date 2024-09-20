@@ -5,7 +5,7 @@ import { HEALTH_ENDPOINT } from "health/models/constants";
 import type { Request, Response } from "express";
 
 /**
- * @swagger
+ * @openapi
  * tags:
  *  name: Health
  *  description: Health check endpoint
@@ -15,7 +15,7 @@ export class HealthController {
   public constructor(@inject(HealthService) private readonly _healthService: HealthService) {}
 
   /**
-   * @swagger
+   * @openapi
    * /health:
    *   get:
    *     summary: Check the health of the system
@@ -27,9 +27,6 @@ export class HealthController {
    *           application/json:
    *             schema:
    *               type: object
-   *               properties:
-   *                 status:
-   *                   type: string
    */
   @httpGet("/")
   public check(_: Request, res: Response): void {
