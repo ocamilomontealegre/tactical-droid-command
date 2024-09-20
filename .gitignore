@@ -1,0 +1,10 @@
+# Node
+node_modules/
+pnpm-lock.yaml
+
+# Environment
+.env
+
+# Generated files
+dist/
+logs/
