@@ -76,6 +76,77 @@ npm run start:dev
 
 ---
 
+## 🪛 **Usage of `audit.sh`**
+
+This script provides a simple interface for interacting with the audit API. Below are the available options and their usage:
+
+### Commands
+
+- **list**
+  - **Description:** Lists all interactions stored in the audit system.
+  - **Usage:**
+
+    ```bash
+    ./audit.sh list
+    ```
+
+- **detail [ID]**
+  - **Description:** Displays detailed information about a specific interaction identified by its ID.
+  - **Usage:**
+
+    ```bash
+    ./audit.sh detail [ID]
+    ```
+
+  - **Example:**
+
+    ```bash
+    ./audit.sh detail 614d1f78b28f4a5a5c9e9d5a
+    ```
+
+- **delete [ID]**
+  - **Description:** Deletes a specific interaction from the audit system using its ID.
+  - **Usage:**
+
+    ```bash
+    ./audit.sh delete [ID]
+    ```
+
+  - **Example:**
+
+    ```bash
+    ./audit.sh delete 614d1f78b28f4a5a5c9e9d5a
+    ```
+
+- **create [DATA]**
+  - **Description:** Creates a new interaction in the audit system. The data must be provided in JSON format.
+  - **Usage:**
+
+    ```bash
+    ./audit.sh create '[JSON_DATA]'
+    ```
+
+  - **Example:**
+
+    ```bash
+    ./audit.sh create '{"protocols":["avoid-mech"],"scan":[{"coordinates":{"x":0,"y":40},"enemies":{"type":"soldier","number":10}}]}'
+    ```
+
+### Notes
+
+- Ensure that the API server is running and accessible at `http://localhost:8888`.
+- When using the `create` command, ensure the JSON data is properly formatted and enclosed in single quotes to avoid shell interpretation issues.
+
+### Help
+
+If you need further assistance, you can always run the script without any arguments to see the help message:
+
+```bash
+./audit.sh
+```
+
+---
+
 ## 📖 API Documentation
 
 The project uses Swagger to document and test the API interactively. Once the server is running, you can access the documentation at:
